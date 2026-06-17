@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { personalInfo } from "@/lib/data";
 
 export default function Hero() {
@@ -44,12 +45,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center pt-20 grid-bg mesh-gradient overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-20 grid-bg mesh-gradient overflow-hidden  container-custom"
     >
       {/* Background glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#00fedf]/8 rounded-full blur-[140px] animate-pulse pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#60a5fa]/8 rounded-full blur-[140px] animate-pulse pointer-events-none" />
       <div
-        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#d6baff]/5 rounded-full blur-[140px] animate-pulse pointer-events-none"
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#a78bfa]/5 rounded-full blur-[140px] animate-pulse pointer-events-none"
         style={{ animationDelay: "2s" }}
       />
 
@@ -57,12 +58,12 @@ export default function Hero() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
 
         {/* Available badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00fedf]/5 border border-[#00fedf]/15 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#60a5fa]/5 border border-[#60a5fa]/15 mb-8">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00fedf] opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00fedf]" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#60a5fa] opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#60a5fa]" />
           </span>
-          <span className="text-[10px] text-[#00fedf] uppercase tracking-[0.2em] font-mono">
+          <span className="text-[10px] text-[#60a5fa] uppercase tracking-[0.2em] font-sans">
             Open to Opportunities
           </span>
         </div>
@@ -70,27 +71,24 @@ export default function Hero() {
         {/* Name */}
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight"
-          style={{ fontFamily: "var(--font-display)", letterSpacing: "-0.02em" }}
+          style={{ fontFamily: "var(--font-inter)", letterSpacing: "-0.02em" }}
         >
           Hi, I&apos;m{" "}
-          <span
-            className="text-[#00fedf]"
-            style={{ textShadow: "0 0 30px rgba(0, 254, 223, 0.35)" }}
-          >
-            Kirtish Chaturvedi
-          </span>
+         <span className="text-[#60a5fa]">
+  Kirtish Chaturvedi
+</span> 
         </h1>
 
         {/* Typewriter */}
         <div className="h-8 mb-6 flex items-center justify-center">
-          <p className="text-lg md:text-xl text-[#b9cac5] font-mono">
+          <p className="text-lg md:text-xl text-[#a0a0b8] font-sans">
             {displayText}
             <span className="typewriter-cursor" />
           </p>
         </div>
 
         {/* Bio */}
-        <p className="text-[#83948f] font-mono text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-[#6b6b8a] font-sans text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-10">
           Crafting clean, responsive UIs and scalable full-stack applications.
           <br className="hidden md:block" />
           Currently pursuing M.Tech in IT — building things that matter.
@@ -100,14 +98,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <button
             onClick={scrollToProjects}
-            className="w-full sm:w-auto px-8 py-3.5 bg-[#00fedf] text-[#00372f] font-mono font-bold text-sm uppercase tracking-widest rounded-lg neon-glow-cyan hover:scale-105 active:scale-95 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-3.5 bg-[#60a5fa] text-[#0a0a10] font-sans font-bold text-sm uppercase tracking-widest rounded-lg neon-glow-cyan hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Explore Work →
           </button>
           <a
             href={personalInfo.resumeUrl}
             target="_blank" rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 neon-border text-[#00fedf] font-mono font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-[#00fedf]/5 hover:scale-105 active:scale-95 transition-all duration-300 text-center"
+            className="w-full sm:w-auto px-8 py-3.5 neon-border text-[#60a5fa] font-sans font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-[#60a5fa]/5 hover:scale-105 active:scale-95 transition-all duration-300 text-center"
           >
             Get Resume ↓
           </a>
@@ -120,7 +118,7 @@ export default function Hero() {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#3a4a46] text-[#b9cac5] hover:text-[#00fedf] hover:border-[#00fedf]/50 hover:bg-[#00fedf]/5 transition-all duration-300"
+            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#2a2a3a] text-[#a0a0b8] hover:text-[#60a5fa] hover:border-[#60a5fa]/50 hover:bg-[#60a5fa]/5 transition-all duration-300"
             aria-label="GitHub"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -133,7 +131,7 @@ export default function Hero() {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#3a4a46] text-[#b9cac5] hover:text-[#00fedf] hover:border-[#00fedf]/50 hover:bg-[#00fedf]/5 transition-all duration-300"
+            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#2a2a3a] text-[#a0a0b8] hover:text-[#60a5fa] hover:border-[#60a5fa]/50 hover:bg-[#60a5fa]/5 transition-all duration-300"
             aria-label="LinkedIn"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -144,7 +142,7 @@ export default function Hero() {
           {/* Gmail */}
           <a
             href={`mailto:${personalInfo.email}`}
-            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#3a4a46] text-[#b9cac5] hover:text-[#00fedf] hover:border-[#00fedf]/50 hover:bg-[#00fedf]/5 transition-all duration-300"
+            className="w-10 h-10 flex items-center justify-center rounded-lg border border-[#2a2a3a] text-[#a0a0b8] hover:text-[#60a5fa] hover:border-[#60a5fa]/50 hover:bg-[#60a5fa]/5 transition-all duration-300"
             aria-label="Email"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -155,8 +153,8 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <div className="absolute mt-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
-          <span className="text-[10px] text-[#83948f] font-mono uppercase tracking-widest">Scroll</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#83948f" strokeWidth="2">
+          <span className="text-[10px] text-[#6b6b8a] font-sans uppercase tracking-widest">Scroll</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b6b8a" strokeWidth="2">
             <path d="M12 5v14M5 12l7 7 7-7" />
           </svg>
         </div>

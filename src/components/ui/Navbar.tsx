@@ -12,7 +12,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
+ 
       // Detect active section
       const sections = navLinks.map((l) => l.href.replace("#", ""));
       for (const id of sections.reverse()) {
@@ -49,19 +49,19 @@ export default function Navbar() {
         isScrolled ? "glass" : "bg-transparent"
       }`}
     >
-      <div className="flex justify-between items-center w-full px-6 max-w-[1200px] mx-auto h-20">
+      <div className="flex justify-between items-center w-full px-6 max-w-[1200px] mx-auto h-20   container-custom">
         {/* Logo */}
         <a
           href="#"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 group cursor-pointer"
         >
-          <div className="w-10 h-10 bg-[#00fedf]/10 rounded flex items-center justify-center border border-[#00fedf]/20 group-hover:border-[#00fedf]/60 transition-all duration-300">
-            <span className="text-[#00fedf] font-bold text-sm font-mono">{"</>"}</span>
+          <div className="w-10 h-10 bg-[#60a5fa]/10 rounded flex items-center justify-center border border-[#60a5fa]/20 group-hover:border-[#60a5fa]/60 transition-all duration-300">
+            <span className="text-[#60a5fa] font-bold text-sm font-sans">{"</>"}</span>
           </div>
           <span
-            className="font-bold text-xl text-white group-hover:text-[#00fedf] transition-colors duration-300"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-bold text-xl text-white group-hover:text-[#60a5fa] transition-colors duration-300"
+            style={{ fontFamily: "var(--font-inter)" }}
           >
             KC
           </span>
@@ -75,14 +75,14 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-xs uppercase tracking-widest font-mono transition-colors duration-300 relative group ${
-                  isActive ? "text-[#00fedf]" : "text-[#b9cac5] hover:text-[#00fedf]"
+                className={`text-xs uppercase tracking-widest font-sans transition-colors duration-300 relative group ${
+                  isActive ? "text-[#60a5fa]" : "text-[#a0a0b8] hover:text-[#60a5fa]"
                 }`}
               >
                 {link.label}
                 {/* Underline indicator */}
                 <span
-                  className={`absolute -bottom-1 left-0 h-[1px] bg-[#00fedf] transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-[1px] bg-[#60a5fa] transition-all duration-300 ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -94,7 +94,7 @@ export default function Navbar() {
           <a
             href={personalInfo.resumeUrl}
             target="_blank" rel="noopener noreferrer"
-            className="neon-border px-6 py-2 text-[#00fedf] text-xs font-mono uppercase tracking-widest rounded-lg hover:bg-[#00fedf]/5 transition-all duration-300"
+            className="neon-border px-6 py-2 text-[#60a5fa] text-xs font-sans uppercase tracking-widest rounded-lg hover:bg-[#60a5fa]/5 transition-all duration-300"
           >
             Resume ↓
           </a>
@@ -107,17 +107,17 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-[#e4e1e9] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-[#e2e2f0] transition-all duration-300 ${
               menuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#e4e1e9] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-[#e2e2f0] transition-all duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-[#e4e1e9] transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-[#e2e2f0] transition-all duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
@@ -135,7 +135,7 @@ export default function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-left text-sm uppercase tracking-widest font-mono text-[#b9cac5] hover:text-[#00fedf] transition-colors duration-300 py-1"
+              className="text-left text-sm uppercase tracking-widest font-sans text-[#a0a0b8] hover:text-[#60a5fa] transition-colors duration-300 py-1"
             >
               {link.label}
             </button>
@@ -143,7 +143,7 @@ export default function Navbar() {
           <a
             href={personalInfo.resumeUrl}
             download
-            className="neon-border px-6 py-2.5 text-[#00fedf] text-xs font-mono uppercase tracking-widest rounded-lg text-center hover:bg-[#00fedf]/5 transition-all duration-300 mt-2"
+            className="neon-border px-6 py-2.5 text-[#60a5fa] text-xs font-sans uppercase tracking-widest rounded-lg text-center hover:bg-[#60a5fa]/5 transition-all duration-300 mt-2"
           >
             Resume ↓
           </a>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { personalInfo } from "@/lib/data";
 
 const highlights = [
-  { label: "M.Tech IT", icon: "🎓" },
+  { label: "M.Tech IT", icon: "🎓" }, 
   { label: "B.Tech IT", icon: "🎓" },
   { label: "Ujjain, MP", icon: "📍" },
   { label: "Open to Work", icon: "💼" },
@@ -36,21 +36,21 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-28 px-6 overflow-hidden"
+      className="relative py-28 px-6 overflow-hidden  container-custom"
     >
       {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#d6baff]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#a78bfa]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-[1200px] mx-auto">
         {/* Section Label */}
         <div className="reveal opacity-0 translate-y-6 transition-all duration-700 flex items-center gap-3 mb-12">
-          <span className="text-[#00fedf] font-mono text-xs uppercase tracking-[0.2em]">
+          <span className="text-[#60a5fa] font-sans text-xs uppercase tracking-[0.2em]">
             // 01
           </span>
-          <span className="text-[#00fedf] font-mono text-xs uppercase tracking-[0.2em]">
+          <span className="text-[#60a5fa] font-sans text-xs uppercase tracking-[0.2em]">
             About Me
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-[#00fedf]/30 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-[#60a5fa]/30 to-transparent" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -61,14 +61,14 @@ export default function About() {
              <div
   className="p-[3px]"
   style={{
-    background: "linear-gradient(135deg, #00fedf, #7b5ea7)",
+    background: "linear-gradient(135deg, #60a5fa, #7b5ea7)",
     borderRadius: "50%",
     width: "270px",
     height: "370px",
   }}
 >
   <div
-    className="w-full h-full overflow-hidden bg-[#131318]"
+    className="w-full h-full overflow-hidden bg-[#12121a]"
     style={{ borderRadius: "50%" }}
   >
     <Image
@@ -83,8 +83,8 @@ export default function About() {
 </div>
 
               {/* Floating badge */}
-              <div className="absolute -bottom-3 -right-3 bg-[#131318] border border-[#00fedf]/30 rounded-lg px-3 py-2 neon-glow-cyan">
-                <span className="text-[#00fedf] font-mono text-xs">
+              <div className="absolute -bottom-3 -right-3 bg-[#12121a] border border-[#60a5fa]/30 rounded-lg px-3 py-2 neon-glow-cyan">
+                <span className="text-[#60a5fa] font-sans text-xs">
                   &lt;Developer /&gt;
                 </span>
               </div>
@@ -94,7 +94,7 @@ export default function About() {
                 {[...Array(9)].map((_, i) => (
                   <span
                     key={i}
-                    className="absolute w-1 h-1 rounded-full bg-[#00fedf]"
+                    className="absolute w-1 h-1 rounded-full bg-[#60a5fa]"
                     style={{
                       top: `${Math.floor(i / 3) * 30}%`,
                       left: `${(i % 3) * 30}%`,
@@ -109,13 +109,13 @@ export default function About() {
           <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200">
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-2"
-              style={{ fontFamily: "var(--font-display)" }}
+              style={{ fontFamily: "var(--font-inter)" }}
             >
               Engineering Digital Solutions
-              <span className="text-[#00fedf]"> with Precision</span>
+              <span className="text-[#60a5fa]"> with Precision</span>
             </h2>
 
-            <p className="text-[#83948f] font-mono text-sm leading-relaxed mb-6 mt-4">
+            <p className="text-[#6b6b8a] font-sans text-sm leading-relaxed mb-6 mt-4">
               {personalInfo.bio}
             </p>
 
@@ -124,7 +124,7 @@ export default function About() {
               {highlights.map((item) => (
                 <span
                   key={item.label}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1f1f25] border border-[#3a4a46] rounded-lg text-[#b9cac5] font-mono text-xs hover:border-[#00fedf]/40 hover:text-[#00fedf] transition-all duration-300"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1a1a24] border border-[#2a2a3a] rounded-lg text-[#a0a0b8] font-sans text-xs hover:border-[#60a5fa]/40 hover:text-[#60a5fa] transition-all duration-300"
                 >
                   <span>{item.icon}</span>
                   {item.label}
@@ -133,7 +133,7 @@ export default function About() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#3a4a46]/50">
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#2a2a3a]/50">
               {[
                 { value: "2+", label: "Projects Built" },
                 { value: "4+", label: "Technologies" },
@@ -141,12 +141,12 @@ export default function About() {
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div
-                    className="text-2xl font-bold text-[#00fedf] mb-1"
-                    style={{ fontFamily: "var(--font-display)" }}
+                    className="text-2xl font-bold text-[#60a5fa] mb-1"
+                    style={{ fontFamily: "var(--font-inter)" }}
                   >
                     {stat.value}
                   </div>
-                  <div className="text-[10px] text-[#83948f] font-mono uppercase tracking-wider">
+                  <div className="text-[10px] text-[#6b6b8a] font-sans uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </div>
