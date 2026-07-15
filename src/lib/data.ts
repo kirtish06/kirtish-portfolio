@@ -46,16 +46,16 @@ export const projects = [
     image: "/projects/http-server.png",
   },
   {
-    id: 2,
-    title: "E-Commerce Website",
-    description:
-      "A modern full-stack e-commerce platform featuring product listings, cart management, and checkout flow. Built with Next.js and Tailwind CSS on the frontend, with Node.js, Express, and PostgreSQL on the backend.",
-    tags: ["Next.js", "Tailwind CSS", "React", "Node.js", "PostgreSQL"],
-    github: "https://github.com/kirtish06",
-    live: null,
-    featured: true,
-    image: "/projects/ecommerce.png",
-  },
+  id: 2,
+  title: "JobGrove",
+  description:
+    "A multi-page job board web app where users can browse listings, search and filter by role, category & job type, view full job details, and bookmark jobs. Saved jobs persist even after closing the browser. Designed with a calm, nature-inspired UI to make job hunting feel less stressful.",
+  tags: ["React", "Vite", "Tailwind CSS", "React Router v6", "Context API", "localStorage", "JavaScript"],
+  github: "https://github.com/kirtish06/jobgrove",
+  live: "https://jobgrove.vercel.app",
+  featured: true,
+  image: "https://res.cloudinary.com/dfpfqfml1/image/upload/f_auto,q_auto/v1784119155/Screenshot_2026-07-15_173243_pxnlww.png",
+},
 ];
 
 export const education = [
